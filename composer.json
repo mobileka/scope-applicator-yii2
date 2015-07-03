@@ -1,0 +1,28 @@
+{
+    "name": "mobileka/scope-applicator-yii2",
+    "description": "Scope Applicator bindings for Yii2 Framework",
+    "keywords": ["scopes", "filters", "filtering", "yii2", "yii"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Armen Markossyan",
+            "email": "a.a.markossyan@gmail.com",
+            "homepage": "http://blog.armen.im"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "mobileka/scope-applicator": "1.0.*",
+        "yiisoft/yii2": "2.0.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.1.*",
+        "mockery/mockery": "0.9.3",
+        "satooshi/php-coveralls": "0.6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mobileka\\ScopeApplicator\\": "src/Mobileka/ScopeApplicator"
+        }
+    }
+}
