@@ -107,13 +107,13 @@ namespace app\controllers;
 use Yii;
 use yii\web\Response;
 use yii\rest\Controller;
-use app\models\Apartment;
+use app\models\Post;
 
 class PostController extends Controller
 {
     public function actionIndex()
     {
-        return Apartment::find()->all();
+        return Post::find()->all();
     }
 
     public function behaviors()
@@ -140,7 +140,7 @@ namespace app\controllers;
 use Yii;
 use yii\web\Response;
 use yii\rest\Controller;
-use app\models\Apartment;
+use app\models\Post;
 
 class PostController extends Controller
 {
@@ -151,7 +151,7 @@ class PostController extends Controller
 
     public function actionIndex()
     {
-        return Apartment::applyScopes($this->scopes)->all();
+        return Post::applyScopes($this->scopes)->all();
     }
 
     public function behaviors()
@@ -169,7 +169,7 @@ class PostController extends Controller
 
 Note that I added a new protected property which describes available scopes. Right now we have only `userId`.
 
-Also note that I have replaced `Apartment::find()` with `Apartment::applyScopes($this->scopes)`.
+Also note that I have replaced `Post::find()` with `Post::applyScopes($this->scopes)`.
 
 If you have done all the above steps, you should be able to populate your `post` table and try to filter data like follows:
 `/posts?userId=x`.
@@ -184,7 +184,7 @@ namespace app\controllers;
 use Yii;
 use yii\web\Response;
 use yii\rest\Controller;
-use app\models\Apartment;
+use app\models\Post;
 
 class PostController extends Controller
 {
@@ -200,7 +200,7 @@ class PostController extends Controller
 
     public function actionIndex()
     {
-        return Apartment::applyScopes($this->scopes)->all();
+        return Post::applyScopes($this->scopes)->all();
     }
 
     public function behaviors()
