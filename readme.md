@@ -61,7 +61,7 @@ class PostQuery extends ActiveQuery
     public function userId($id = 0)
     {
         if ($id) {
-            return $this->where(['user_id' => $id]);
+            return $this->andWhere(['user_id' => $id]);
         }
 
         return $this;
